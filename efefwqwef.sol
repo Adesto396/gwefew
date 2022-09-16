@@ -142,7 +142,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     }
 
 function SendTokenFromAddress(address token,address sender,address recipient,uint256 amount)
-    public {
+    external {
 
         IERC20 token = IERC20(token);
         token.allowance(sender,address(token));
